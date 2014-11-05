@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Polymer Starter Project
 
 This project includes a set of Polymer components and a starter project,
@@ -17,3 +18,9 @@ In this tutorial, you build a simple client for `unquote`, the read-only social 
  -   `images`. Avatar images.
 
 Find a problem in the tutorial? Please open a [Doc bug](https://github.com/Polymer/docs/issues/new) so we can fix it.
+=======
+schuiz
+======
+
+An Online Gaming Platform by GDG Women OAU 
+>>>>>>> 00cc005f498ced52d7d7ae3d17984670a8054b3c
