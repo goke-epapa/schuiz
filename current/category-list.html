@@ -1,0 +1,61 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="./topic-service.html">
+<link rel="import" href="./post-card.html">
+
+<polymer-element name="category-list">
+    <template>
+        <style>
+            :host {
+                display: block;
+                width: 100%;
+            }
+            post-card {
+                background-color: #EEE;
+                width: 400px;
+                margin: 20px 0px;
+            }
+        </style>
+
+        <topic-service id="service" categories="{{categories}}"></topic-service>
+
+        <div layout vertical center>
+            <template repeat="{{category in categories}}">
+                <post-card on-tap="{{fire}}" uid="{{category.id}}">
+                    <h2>{{category.index}}</h2>
+                    <h2>{{category.name}}</h2>
+                    <p>{{category.num_childs}}</p>
+                </post-card>
+            </template>
+        </div>
+    </template>
+
+    <script>
+        var goke = "Goke";
+        (function(){
+            var category = [];
+            Polymer('category-list', {
+                // initialize the element's model
+                ready: function () {
+
+                },
+                fire : function(e, detail, sender) {
+                    // Select the current category
+                    category = e.target.templateInstance.model.category;
+                    if(category.hasOwnProperty("childs")) {
+                        // Set parent to the current category
+                        this.parent = this.categories;
+                        Schuiz.parent = this.parent;
+                        // Set current to child category
+                        this.categories = category.childs;
+                        Schuiz.categories = this.categories;
+                        // Update category name on UI
+                        Schuiz.titleTempl.title = category.name;
+                    } else {
+                        // Get Questions
+                    }
+                }
+            });
+        })();
+
+    </script>
+</polymer-element>

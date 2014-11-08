@@ -1,0 +1,15 @@
+<link rel="import" href="../components/polymer/polymer.html">
+
+<polymer-element name="index-element">
+    <template>
+        <category-list id="globals"></category-list>
+
+    </template>
+    <script>
+        Polymer({
+            ready: function() {
+                console.log('Last name: ' + this.$.globals.category);
+            }
+        });
+    </script>
+</polymer-element>

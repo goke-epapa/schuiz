@@ -1,0 +1,24 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/paper-icon-button/paper-icon-button.html">
+<polymer-element name="back-button" attributes="categories">
+    <template>
+        <paper-icon-button on-tap="{{previous}}" id="backIcon"
+                           icon="arrow-back"></paper-icon-button>
+    </template>
+
+    <script>
+        Polymer({
+            // initialize the element's model
+            ready: function () {
+                console.log(this.categories);
+            },
+            previous: function (e, detail, sender) {
+                // Select the current category
+                console.table(Schuiz.categories);
+                console.log(Schuiz.parent);
+
+            }
+        });
+    </script>
+
+</polymer-element>

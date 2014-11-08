@@ -1,0 +1,19 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<polymer-element name="app-globals" attributes="categories">
+    <script>
+        (function() {
+            // these variables are shared by all instances of app-globals
+            var firstName = 'John';
+            var lastName = 'Smith';
+
+            Polymer({
+                ready: function() {
+                    // copy global values into instance properties
+                    this.firstName = firstName;
+                    this.lastName = lastName;
+                    this.categories = [];
+                }
+            });
+        })();
+    </script>
+</polymer-element>

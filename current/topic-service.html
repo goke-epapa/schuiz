@@ -1,0 +1,32 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/core-ajax/core-ajax.html">
+<polymer-element name="topic-service" attributes="categories">
+    <template>
+        <style>
+            :host {
+                display: none;
+            }
+        </style>
+        <!--url="http://schuiz-core.appspot.com/tree/getTree"-->
+        <core-ajax id="ajax"
+                   auto
+                   url="../api/tree.json"
+                   on-core-response="{{categoriesLoaded}}"
+                   handleAs="json">
+        </core-ajax>
+    </template>
+    <script>
+        Polymer('topic-service', {
+            created: function (){
+                this.categories = [];
+                this.tree = [];
+                this.parent = [];
+            },
+            categoriesLoaded: function () {
+                // Make a copy of the loaded data
+                this.categories = this.$.ajax.response.slice(0);
+                console.table("Topic Service", this.categories);
+            }
+        });
+    </script>
+</polymer-element>

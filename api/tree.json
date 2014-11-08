@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Technology",
+        "num_childs": 5,
+        "childs": [
+            {
+                "id": 1,
+                "name": "Computer Science and Engineering",
+                "childs": [
+                    {
+                        "id": 1,
+                        "name": "CSC201"
+                    },
+                    {
+                        "id": 2,
+                        "name": "CPE310"
+                    },
+                    {
+                        "id": 3,
+                        "name": "CSC302"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Sciences",
+        "num_childs": 4,
+        "childs": [
+            {
+                "id": 1,
+                "name": "Microbiology",
+                "childs": [
+                    {
+                        "id": 1,
+                        "name": "MCB301"
+                    },
+                    {
+                        "id": 2,
+                        "name": "MCB401"
+                    },
+                    {
+                        "id": 3,
+                        "name": "MCB302"
+                    }
+                ]
+            }
+        ]
+    }
+]
